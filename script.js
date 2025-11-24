@@ -27,7 +27,7 @@ document.getElementById("generateBtn").addEventListener("click", async function(
         formData.append("style_images", file);
     });
 
-    const res = await fetch("YOUR_BACKEND_URL/generate", {
+    const res = await fetch( "http://127.0.0.1:8000", {
         method: "POST",
         body: formData
     });
