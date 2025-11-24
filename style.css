@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f6f8fa;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #222;
+    color: white;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+#preview img {
+    width: 120px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+#output img {
+    width: 350px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
