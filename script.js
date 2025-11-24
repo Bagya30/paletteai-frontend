@@ -57,12 +57,18 @@ generateBtn.addEventListener("click", async ()=>{
     if(!res.ok) throw new Error("Server error: " + res.statusText);
     const data = await res.json();
 
-    // Backend returns either data.output_image (single URL) or arrays
+    // Backend returns either data.output_image (single URL or relative path) or arrays
     const images = Array.isArray(data.output_image) ? data.output_image : [data.output_image];
 
     images.forEach(src=>{
       const img = document.createElement("img");
-      img.src = src;
+      // if backend returned a relative path (starts with "/"), prepend backendBase
+      if (typeof src === "string" && src.startsWith("/")) {
+        img.src = backendBase + src;
+      } else {
+        // otherwise assume it's already an absolute URL
+        img.src = src;
+      }
       output.appendChild(img);
     });
     setStatus("Completed");
