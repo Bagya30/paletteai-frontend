@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PaletteAI – Personalized Style Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🎨 PaletteAI</h1>
+        <p>Upload your style images + enter a prompt → Generate consistent stylized images</p>
+    </header>
+
+    <section class="upload-section">
+        <h2>1. Upload Style Reference Images</h2>
+        <input type="file" id="styleImages" multiple accept="image/*">
+        <div id="preview"></div>
+    </section>
+
+    <section class="prompt-section">
+        <h2>2. Enter Text Prompt</h2>
+        <textarea id="prompt" placeholder="e.g., A futuristic cat playing piano"></textarea>
+    </section>
+
+    <section class="generate-section">
+        <button id="generateBtn">Generate Image</button>
+    </section>
+
+    <section class="output-section">
+        <h2>Generated Output</h2>
+        <div id="output"></div>
+    </section>
+
+    <footer>
+        <p>Built with ❤️ for Hackathon 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
